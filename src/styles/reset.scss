@@ -1,0 +1,46 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+} 
+
+a {
+  text-decoration: none;
+}
+
+ul, li, p, button, input, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fff;
+}
+
+img {
+  display: block;
+}
+
+button {
+  display: block;
+  border: none;
+  background-color: transparent;
+  cursor:pointer;
+  &:focus {
+    outline:none;
+  }
+  &:active {
+    outline:none;
+  }
+}
+
+input {
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+  &:focus {
+    outline: none;
+  }
+}
