@@ -9,11 +9,21 @@ html {
 }
 
 body {
-  background-color: $whitePrimary;
+  background-color: $bodyBg;
 }
 
-.container {
+.main {
+  background-color: $mainBg;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+
+.app-container {
   max-width: 1366px;
   width: 100%;
   margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
