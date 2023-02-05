@@ -29,7 +29,7 @@ export const createNewBinRequest = (payload, apiKey, securityKey = undefined) =>
 
 export const deleteBinRequest = (id, securityKey = undefined) => {
   if (securityKey) {
-    return axios.post(`${BASE_URL}bin/${id}`, {headers: {
+    return axios.delete(`${BASE_URL}bin/${id}`, {headers: {
       "Security-key": securityKey,
     }});
   }

@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+.button {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid $gray300;
+  transition: 0.2s;
+  &:hover {
+    transition: 0.2s;
+  }
+  &.primary {
+    background-color: $buttonPrimaryBg;
+    &:hover {
+      background-color: $buttonPrimaryBgHover;
+    }
+  }
+}
