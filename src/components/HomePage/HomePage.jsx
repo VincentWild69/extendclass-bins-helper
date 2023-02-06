@@ -1,11 +1,14 @@
 import styles from './HomePage.module.scss';
 import Button from '../../ui/Button/Button';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { getAllBinsIdsRequest } from './../../api/requests';
 import Loader from '../../ui/Loader/Loader';
+import TextInput from '../../ui/TextInput/TextInput';
+import { MainContext } from './../../Context/MainContext';
 
 const HomePage = () => {
   const [binsArr, setBinsArr] = useState([]);
+  const { apiKey } = useContext(MainContext);
 
   const b = [
     "03f6d7ddfdfa",
@@ -21,7 +24,7 @@ const HomePage = () => {
 ];
 
   const handle = () => {
-    console.log(typeof binsArr);
+    console.log('d');
   }
 
   // useEffect(() => {
@@ -38,6 +41,7 @@ const HomePage = () => {
       {
         binsArr.length === 0 ? <Loader /> : binsArr.map(bin => <p key={bin}>{bin}</p>)
       }
+      <TextInput />
     </div>
   );
 }

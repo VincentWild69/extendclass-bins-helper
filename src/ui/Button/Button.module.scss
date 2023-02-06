@@ -1,9 +1,8 @@
 @import '../../styles/variables.scss';
 
 .button {
-  padding: 5px;
+  padding: 6px 10px;
   border-radius: 5px;
-  border: 1px solid $gray300;
   transition: 0.2s;
   &:hover {
     transition: 0.2s;
@@ -12,6 +11,22 @@
     background-color: $buttonPrimaryBg;
     &:hover {
       background-color: $buttonPrimaryBgHover;
+      transition: 0.2s;
     }
   }
+  &.clear {
+    border: 1px solid $black;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.259);
+      transition: 0.2s;
+    }
+  }
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.fullWidth {
+  width: 100%;
 }

@@ -1,0 +1,16 @@
+.loaderWrapper {
+  background-color: transparent;
+  position: relative;
+  margin: 5px;;
+}
+
+.loaderBody {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loaderSvg {
+  display: block;
+}
