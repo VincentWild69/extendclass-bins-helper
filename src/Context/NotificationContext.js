@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import NotificationBar from "../components/NotificationBar/NotificationBar";
+import NotificationBar from './../ui/NotificationBar/NotificationBar';
 
 export const NotificationContext = createContext(null);
 

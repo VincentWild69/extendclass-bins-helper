@@ -2,10 +2,15 @@ import styles from './Header.module.scss';
 import Button from '../../ui/Button/Button';
 import { useMainContext } from './../../Context/MainContext';
 import HeaderApiKey from './../HeaderApiKey/HeaderApiKey';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Header = () => {
-  const { apiKey, setApiKey } = useMainContext();
+  const { apiKey, clearMainContext } = useMainContext();
+  const navigate = useNavigate();
+  const onLogout = () => {
+    clearMainContext();
+    navigate("/");
+  }
 
   return (
     <div className={styles.header}>
@@ -14,7 +19,7 @@ const Header = () => {
         apiKey ? (
           <Button
             variant="clear"
-            onClick={() => setApiKey('')}
+            onClick={onLogout}
           >
             Logout
           </Button>

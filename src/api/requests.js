@@ -3,7 +3,8 @@ import { BASE_URL } from './../constants/constants';
 
 export const getAllBinsIdsRequest = (apiKey) => {
   return axios.get(`${BASE_URL}bins`, {headers: {
-    "Api-key": apiKey
+    "Api-key": apiKey,
+    "Cache-Control": "no-store"
   }});
 };
 

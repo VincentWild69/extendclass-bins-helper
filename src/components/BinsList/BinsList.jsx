@@ -22,7 +22,7 @@ const BinsList = () => {
           <p>No bins by current api key</p>
         ) : (
           binsList.map((bin) => (
-            <Link to={`bins/${bin}`} className={styles.binLink}>
+            <Link to={`bins/${bin}`} className={styles.binLink} key={bin}>
               {bin}
             </Link>
           ))

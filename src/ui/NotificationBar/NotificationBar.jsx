@@ -1,8 +1,8 @@
 import { useNotification } from '../../Context/NotificationContext';
-import styles from './NotificationBar.module.scss';
-import Alert from './../Alert/Alert';
 import { useEffect } from 'react';
 import { NOTIFICATION_TYPES } from '../../constants/constants';
+import styles from './NotificationBar.module.scss';
+import Alert from './../Alert/Alert';
 
 const NotificationBar = () => {
   const { SUCCESS } = NOTIFICATION_TYPES;
@@ -16,7 +16,7 @@ const NotificationBar = () => {
   useEffect(() => {
     let timer = null;
     if (message) {
-      const timeout = type === SUCCESS ? 2000 : 5000;
+      const timeout = type === SUCCESS ? 3000 : 5000;
       timer = setTimeout(() => {
         clearNotification();
       }, timeout);

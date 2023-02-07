@@ -18,14 +18,20 @@ const b = [
 ];
 
 export const MainContextProvider = ({ children, ...props }) => {
-  const [apiKey, setApiKey] = useState('ww');
+  const [apiKey, setApiKey] = useState('');
   const [binsList, setBinsList] = useState([]);
+  
+  const clearMainContext = () => {
+    setApiKey('');
+    setBinsList([]);
+  }
 
   const valueForContextProvider = {
     apiKey,
     setApiKey,
     binsList,
-    setBinsList
+    setBinsList,
+    clearMainContext
   };
 
   return (

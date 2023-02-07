@@ -6,7 +6,7 @@ a {
   text-decoration: none;
 }
 
-body, ul, li, p, button, input, h1, h2, h3, h4, h5, h6 {
+body, ul, li, p, button, input, textarea, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
@@ -37,6 +37,7 @@ input {
 
 textarea {
   resize: none;
+  outline: none;
   &:focus {
     outline: none;
   }
