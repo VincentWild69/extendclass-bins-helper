@@ -4,6 +4,11 @@
   background-color: $headerBg;
   padding: 15px 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
+}
+
+.enterApiKeyLink {
+  color: $blue200;
+  text-decoration: underline;
 }

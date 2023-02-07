@@ -7,6 +7,11 @@ const csvToArrayOfObjects = (csv) => {
     separater = /,\s*(?=(?:[^"]|"[^"]*")*$)/;
   }
 
+  const semiColons = csv.split(';').length - 1;
+  if (semiColons > commas && semiColons > tabs) {
+    separater = /;\s*(?=(?:[^"]|"[^"]*")*$)/;
+  }
+
   const lines = csv.split(/\r?\n(?=(?:[^"]|"[^"]*")*$)/);
   const rows = [];
 
@@ -28,20 +33,25 @@ const csvToArrayOfObjects = (csv) => {
   let result = '[';
 
   for (let x = 1; x < rows.length; x += 1) {
-    result += '{';
-    for (let y = 0; y < rows[x].length; y += 1) {
-      rows[x][y] = rows[x][y].replaceAll('\\', '\\\\');
-      rows[x][y] = rows[x][y].replaceAll('"', '\\"');
-      rows[x][y] = rows[x][y].replaceAll('\n', '\\n');
-      rows[x][y] = rows[x][y].replaceAll('\r', ' ');
-      rows[x][y] = rows[x][y].trim();
-      rows[0][y] = rows[0][y].trim();
-      if (y > 0) result += ', ';
-      result = `${result}${quote}${rows[0][y]}${quote}: ${quote}${rows[x][y]}${quote}`;
+    const emptyRow = rows[x].every((item) => item === '');
+    if (!emptyRow) {
+      result += '{';
+      for (let y = 0; y < rows[x].length; y += 1) {
+        rows[x][y] = rows[x][y].replaceAll('\\', '\\\\');
+        rows[x][y] = rows[x][y].replaceAll('"', '\\"');
+        rows[x][y] = rows[x][y].replaceAll('\n', '\\n');
+        rows[x][y] = rows[x][y].replaceAll('\r', ' ');
+        rows[x][y] = rows[x][y].trim();
+        rows[0][y] = rows[0][y].trim();
+        if (rows[0][y] !== '') {
+          result = `${result}${quote}${rows[0][y]}${quote}: ${quote}${rows[x][y]}${quote},`;
+        }
+      }
+      result = result.slice(0, -1);
+      result += '},';
     }
-    result += '}';
-    if (x < rows.length - 1) result += ', ';
   }
+  result = result.slice(0, -1);
   result += ']';
 
   return JSON.parse(result);

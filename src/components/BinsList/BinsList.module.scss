@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+.binsList {
+  width: 150px;
+  padding: 15px;
+  background-color: $binsListBg;
+}
+
+.createBtn {
+  padding: 2px;
+  margin-bottom: 5px;
+}
+
+.binLink {
+  display: block;
+  color: $black;
+  margin-bottom: 5px;
+  transition: 0.2s;
+  &:hover {
+    color: $blue200;
+    transition: 0.2s;
+  }
+}

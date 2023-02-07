@@ -5,10 +5,12 @@ import { getAllBinsIdsRequest } from './../../api/requests';
 import Loader from '../../ui/Loader/Loader';
 import TextInput from '../../ui/TextInput/TextInput';
 import { MainContext } from './../../Context/MainContext';
+import { useNotification } from '../../Context/NotificationContext';
 
 const HomePage = () => {
   const [binsArr, setBinsArr] = useState([]);
   const { apiKey } = useContext(MainContext);
+  const { toggleNotification } = useNotification();
 
   const b = [
     "03f6d7ddfdfa",
@@ -24,7 +26,11 @@ const HomePage = () => {
 ];
 
   const handle = () => {
-    console.log('d');
+    toggleNotification({
+      type: "error",
+      title: "fuck",
+      message: 'ss'
+    })
   }
 
   // useEffect(() => {

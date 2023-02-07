@@ -2,7 +2,13 @@ import clsx from 'clsx';
 import styles from './Button.module.scss';
 
 const Button = ({
-  onClick, variant = 'primary', className, children, centered = false, fullWidth = false,
+  onClick,
+  variant = 'primary',
+  className,
+  children,
+  centered = false,
+  fullWidth = false,
+  border = false,
 }) => {
 
   return (
@@ -15,7 +21,7 @@ const Button = ({
         [styles.clear]: variant === 'clear',
         [styles.centered]: centered,
         [styles.fullWidth]: fullWidth,
-
+        [styles.border]: border,
       })}
     >
       {children}

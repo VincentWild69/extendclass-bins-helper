@@ -1,0 +1,14 @@
+.enterApiKeyForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 10px;
+  p, input, button {
+    margin-bottom: 10px;
+  }
+  .enterApiKeyInput {
+    width: 300px;
+  }
+}

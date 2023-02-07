@@ -1,19 +1,29 @@
 import styles from './Header.module.scss';
 import Button from '../../ui/Button/Button';
-import { MainContext } from './../../Context/MainContext';
-import { useContext } from 'react';
+import { useMainContext } from './../../Context/MainContext';
+import HeaderApiKey from './../HeaderApiKey/HeaderApiKey';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const context = useContext(MainContext);
+  const { apiKey, setApiKey } = useMainContext();
 
   return (
     <div className={styles.header}>
-      <div></div>
-      <Button
-        variant="clear"
-      >
-        Logout
-      </Button>
+      <HeaderApiKey apiKey={apiKey} />
+      {
+        apiKey ? (
+          <Button
+            variant="clear"
+            onClick={() => setApiKey('')}
+          >
+            Logout
+          </Button>
+        ) : (
+          <Link to="enter-api-key" className={styles.enterApiKeyLink}>
+            Enter
+          </Link>
+        )
+      }
     </div>
   );
 }
