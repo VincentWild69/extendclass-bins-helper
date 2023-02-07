@@ -6,10 +6,9 @@ import Alert from './../Alert/Alert';
 
 const NotificationBar = () => {
   const { SUCCESS } = NOTIFICATION_TYPES;
+
   const {
-    type,
-    title,
-    message,
+    notification: { type, title, message },
     clearNotification
   } = useNotification();
 
