@@ -1,9 +1,9 @@
 @import '../../styles/variables.scss';
 
 .notification {
-  width: fit-content;
+  width: max-content;
   min-width: 400px;
-  max-width: 600px;
+  max-width: 700px;
   background-color: $alertBg;
   border: 1px solid $gray500;
   border-radius: 4px;
@@ -11,8 +11,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 1px 1px 10px 0px rgb(3 3 5 / 30%);
+  svg {
+    display: block;
+  }
   .notificationBody {
     display: flex;
+    align-items: center;
     .icon {
       margin-right: 10px;
     }
@@ -20,6 +25,9 @@
       margin-right: 6px;
       font-weight: 500;
       text-transform: capitalize;
+    }
+    .message {
+      margin-right: 10px;
     }
   }
 }

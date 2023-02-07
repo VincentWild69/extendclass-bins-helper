@@ -3,7 +3,6 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import { useMainContext } from "./Context/MainContext";
 import BinsList from "./components/BinsList/BinsList";
-import NotificationBar from "./components/NotificationBar/NotificationBar";
 
 function App() {
   const { apiKey } = useMainContext();
@@ -19,7 +18,6 @@ function App() {
         <Outlet />
       </main>
       <Footer />
-      {/* <NotificationBar /> */}
     </div>
   );
 }

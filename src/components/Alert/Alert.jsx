@@ -5,8 +5,8 @@ import styles from './Alert.module.scss';
 const { SUCCESS, ERROR, INFO } = NOTIFICATION_TYPES;
 
 const Alert = ({ type = INFO, title = undefined, message, onClose }) => {
-  if (!title && type === SUCCESS) title = "success!";
-  if (!title && type === ERROR) title = "error!";
+  if (!title && type === SUCCESS) title = `${SUCCESS}!`;
+  if (!title && type === ERROR) title = `${ERROR}!`;
 
   return (
     <div className={styles.notification}>

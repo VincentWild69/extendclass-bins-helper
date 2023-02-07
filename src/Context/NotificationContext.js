@@ -1,6 +1,5 @@
 import { createContext, useContext, useState } from "react";
 import NotificationBar from "../components/NotificationBar/NotificationBar";
-import { NOTIFICATION_TYPES } from "../constants/constants";
 
 export const NotificationContext = createContext(null);
 
@@ -11,9 +10,6 @@ export const NotificationContextProvider = ({ children, ...props }) => {
   const [title, setTitle] = useState(null);
   const [type, setType] = useState(null);
 
-  const { SUCCESS } = NOTIFICATION_TYPES;
-  const timeout = type === SUCCESS ? 2000 : 5000;
-
   const clearNotification = () => {
     setMessage(null);
     setType(null);
@@ -22,11 +18,8 @@ export const NotificationContextProvider = ({ children, ...props }) => {
 
   const toggleNotification = ({ type, title, message }) => {
     setType(type);
-    setTitle(title);
+    if (title) setTitle(title);
     setMessage(message);
-    // setTimeout(() => {
-    //   clearNotification();
-    // }, timeout)
   }
 
   const valueForContextProvider = {

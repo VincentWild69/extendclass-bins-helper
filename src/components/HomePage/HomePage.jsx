@@ -27,9 +27,9 @@ const HomePage = () => {
 
   const handle = () => {
     toggleNotification({
-      type: "error",
+      type: "warning",
       title: "fuck",
-      message: 'ss'
+      message: 'SUCCESS is assigned a value but never used'
     })
   }
 

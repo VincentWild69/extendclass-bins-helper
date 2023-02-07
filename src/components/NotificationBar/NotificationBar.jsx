@@ -21,10 +21,8 @@ const NotificationBar = () => {
         clearNotification();
       }, timeout);
     }
-    console.log('mount')
     return () => {
       if (timer) clearTimeout(timer);
-      console.log('unmount')
     }
   }, [message])
 

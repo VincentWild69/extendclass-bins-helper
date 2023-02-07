@@ -3,12 +3,15 @@ import TextInput from '../../ui/TextInput/TextInput';
 import styles from './EnterApiKeyForm.module.scss';
 import { useState } from 'react';
 import Button from '../../ui/Button/Button';
+import { Navigate } from 'react-router-dom';
 
 
 const EnterApiKeyForm = () => {
-  const { setApiKey } = useMainContext();
+  const { apiKey, setApiKey } = useMainContext();
 
   const [inputValue, setInputValue] = useState('');
+
+  if (apiKey) return <Navigate to="/" replace={true} />
 
   return (
       <div className={styles.enterApiKeyForm}>
