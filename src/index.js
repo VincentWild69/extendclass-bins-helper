@@ -9,6 +9,7 @@ import { MainContextProvider } from './Context/MainContext';
 import { NotificationContextProvider } from './Context/NotificationContext';
 import BinDetails from './components/BinDetails/BinDetails';
 import EnterApiKeyForm from './components/EnterApiKeyForm/EnterApiKeyForm';
+import BinCreate from './components/BinCreate/BinCreate';
 
 const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: "bins/:id",
         element: <BinDetails />
+      },
+      {
+        path: "bins/create",
+        element: <BinCreate />
       },
     ],
   },

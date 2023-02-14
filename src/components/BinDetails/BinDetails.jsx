@@ -37,6 +37,7 @@ const BinDetails = () => {
 
   return (
     <div className={styles.binDetails}>
+      <p className={styles.binId}>{id}</p>
       <Textarea
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}

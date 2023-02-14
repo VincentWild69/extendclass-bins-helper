@@ -1,20 +1,24 @@
 @import '../../styles/variables.scss';
 
 .binsList {
-  width: 170px;
+  width: 160px;
   padding: 15px;
   background-color: $binsListBg;
+  flex-shrink: 0;
 }
 
 .createBtn {
   padding: 2px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .binLink {
   display: block;
   color: $black;
   margin-bottom: 5px;
+  &.active {
+    color: #0ab900;
+  }
   &:hover {
     color: $blue300;
   }

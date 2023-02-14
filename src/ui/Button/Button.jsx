@@ -18,10 +18,10 @@ const Button = ({
       className={clsx(styles.button, {
         [className]: className,
         [styles.primary]: variant === 'primary',
-        [styles.clear]: variant === 'clear',
         [styles.danger]: variant === 'danger',
         [styles.neutral]: variant === 'neutral',
         [styles.confirm]: variant === 'confirm',
+        [styles.clear]: variant === 'clear',
         [styles.centered]: centered,
         [styles.fullWidth]: fullWidth,
         [styles.border]: border,
