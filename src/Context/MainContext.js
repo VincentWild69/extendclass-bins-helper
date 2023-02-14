@@ -4,7 +4,7 @@ export const MainContext = createContext(null);
 
 export const useMainContext = () => useContext(MainContext);
 
-export const MainContextProvider = ({ children, ...props }) => {
+export const MainContextProvider = ({ children }) => {
   const [apiKey, setApiKey] = useState('');
   const [binsList, setBinsList] = useState([]);
   
@@ -24,7 +24,6 @@ export const MainContextProvider = ({ children, ...props }) => {
   return (
     <MainContext.Provider
       value={{...valueForContextProvider}}
-      {...props}
     >
       {children}
     </MainContext.Provider>

@@ -5,7 +5,7 @@ export const NotificationContext = createContext(null);
 
 export const useNotification = () => useContext(NotificationContext);
 
-export const NotificationContextProvider = ({ children, ...props }) => {
+export const NotificationContextProvider = ({ children }) => {
   const [notification, toggleNotification] = useState({
     type: null,
     title: null,
@@ -29,7 +29,6 @@ export const NotificationContextProvider = ({ children, ...props }) => {
   return (
     <NotificationContext.Provider
       value={{...valueForContextProvider}}
-      {...props}
     >
       <NotificationBar />
       {children}

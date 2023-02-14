@@ -21,6 +21,27 @@
       transition: 0.2s;
     }
   }
+  &.danger {
+    background-color: $buttonErrorBg;
+    &:hover {
+      background-color: $buttonErrorBgHover;
+      transition: 0.2s;
+    }
+  }
+  &.neutral {
+    background-color: $buttonNeutralBg;
+    &:hover {
+      background-color: $buttonNeutralBgHover;
+      transition: 0.2s;
+    }
+  }
+  &.confirm {
+    background-color: $buttonConfirmBg;
+    &:hover {
+      background-color: $buttonConfirmBgHover;
+      transition: 0.2s;
+    }
+  }
 }
 
 .centered {

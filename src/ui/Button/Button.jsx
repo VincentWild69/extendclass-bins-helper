@@ -4,11 +4,11 @@ import styles from './Button.module.scss';
 const Button = ({
   onClick,
   variant = 'primary',
-  className,
-  children,
   centered = false,
   fullWidth = false,
   border = false,
+  className,
+  children,
 }) => {
 
   return (
@@ -19,6 +19,9 @@ const Button = ({
         [className]: className,
         [styles.primary]: variant === 'primary',
         [styles.clear]: variant === 'clear',
+        [styles.danger]: variant === 'danger',
+        [styles.neutral]: variant === 'neutral',
+        [styles.confirm]: variant === 'confirm',
         [styles.centered]: centered,
         [styles.fullWidth]: fullWidth,
         [styles.border]: border,

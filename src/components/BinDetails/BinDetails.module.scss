@@ -4,3 +4,11 @@
   padding: 15px;
   width: 100%;
 }
+
+.binDetailsButtons {
+  margin-top: 20px;
+  display: flex;
+  button:not(:first-child) {
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,21 @@
+@import '../../styles/variables.scss';
+
+.dialogBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dialogTitle {
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.dialogButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button:not(:first-child) {
+    margin-left: 50px;
+  }
+}

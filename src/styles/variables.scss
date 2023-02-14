@@ -1,15 +1,20 @@
 $white: #fff;
 $black: #000;
 $green100: #7ce691;
+$green200: #58e274;
 $yellow100: #e5e5b2;
 $yellow300: #e9ff8d;
 $orange300: #fbba38;
-$orange400: #fcc658;
+$orange400: #f4ad1f;
 $gray300: #838383;
 $gray500: #565656;
 $gray600: #404040;
 $blue200: #2e7bf6;
 $blue300: #0e5ad3;
+$red500: #f93c3c;
+$red300: #fe5757;
+$neutral500: #e9e9f1;
+$neutral600: #dfdfe0;
 
 
 $white100: #fffff2;
@@ -20,6 +25,12 @@ $footerBg: $green100;
 $mainBg: $yellow100;
 $buttonPrimaryBg: $orange300;
 $buttonPrimaryBgHover: $orange400;
+$buttonErrorBg: $red300;
+$buttonErrorBgHover: $red500;
+$buttonNeutralBg: $neutral500;
+$buttonNeutralBgHover: $neutral600;
+$buttonConfirmBg: $green100;
+$buttonConfirmBgHover: $green200;
 $inputBorderColor: $gray500;
 $inputFocusBorderColor: $blue200;
 $binsListBg: #dfc695;
