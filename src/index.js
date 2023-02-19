@@ -39,10 +39,10 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <MainContextProvider>
-      <NotificationContextProvider>
-        <RouterProvider router={router} />
-      </NotificationContextProvider>
-    </MainContextProvider>
+    <NotificationContextProvider>
+      <MainContextProvider>
+          <RouterProvider router={router} />
+      </MainContextProvider>
+    </NotificationContextProvider>
   </React.StrictMode>
 );
