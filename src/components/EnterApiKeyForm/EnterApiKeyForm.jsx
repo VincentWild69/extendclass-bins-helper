@@ -2,7 +2,7 @@ import { useMainContext } from '../../Context/MainContext';
 import { useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import Loader from './../../ui/Loader/Loader';
-import Button from '../../ui/Button/Button';
+import Button from 'ui/Button/Button';
 import TextInput from '../../ui/TextInput/TextInput';
 import styles from './EnterApiKeyForm.module.scss';
 
